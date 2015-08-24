@@ -79,11 +79,11 @@ class Spider1(scrapy.Spider):
         slr_text = sel.xpath('//div[@class = "head-name"]/span[@class = "name"]/a/@href').extract()[0]
         seller_url = slr_text.encode('utf-8')
 
-        phone_text = sel.xpath('//div[@class = "relate-info"]/div[@class = "row"]'
-                               '/span[@class = "amount"]/text()').extract()[1]
-        phone_text = phone_text.encode('utf-8').strip()
-        m = re.match("\d*.{4}\d*",phone_text)
-        phone = m.group(0)
+        #phone_text = sel.xpath('//div[@class = "relate-info"]/div[@class = "row"]'
+        #                       '/span[@class = "amount"]/text()').extract()[1]
+        #phone_text = phone_text.encode('utf-8').strip()
+        #m = re.match("\d*.{4}\d*",phone_text)
+        phone = "400-898-3008"
 
 
         attr_names = []
